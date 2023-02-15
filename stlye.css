@@ -1,0 +1,444 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+    font-family: 'Poppins',sans-serif;
+}
+
+img{
+    width: 100%;
+}
+
+:root{
+    --main-color:#fee600;
+    --text-color: #1b1b1b;
+    --bg-color:#fff;
+    --box-shadow: 2px 2px 10px 4px rgb(14 55 54/15%);
+
+}
+
+section{
+    padding: 80px 100px;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    padding: 20px 100px;
+    color:  var(--text-color) ;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s linear;
+}
+
+.shadow{
+    background: var(--text-color);
+    color:  var(--bg-color) ;
+
+
+}
+header .logo{
+    font-size: 2rem;
+    font-weight: 800;
+}
+header .navbar{
+    display: flex;
+}
+header .navbar a{
+    display: inline-block;
+    padding-left: 40px;
+    color: var(--bg-color);
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+header .fa-solid{
+    font-size: 1.5rem;
+}
+
+.header-icon .fa-solid{
+    padding-left: 20px;
+}
+
+
+.search-box{
+    position: absolute;
+    top: -100%;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%);
+    transition: 0.4s linear;
+    
+}
+.search-box.active{
+    top: 100%;
+}
+
+
+.search-box input{
+    width: 100%;
+    font-size: 1.2rem;
+    padding: 10px 40px;
+}
+#menu-icon{
+    display: none;
+}
+
+/* ----------------------------------------------------home-section---------------------- */
+
+
+.home-section{
+  height: auto;  
+ display: grid;
+ grid-template-columns: repeat(auto-fit,minmax(17rem,auto));
+ align-items: center;
+ background: var(--main-color);
+}
+
+.home-section .home-text h2{
+    text-transform: uppercase;
+    font-size: 4.2rem;
+    font-family: 'Ubuntu',sans-serif;
+    font-weight: 900;
+    line-height: 3.9rem;
+}
+
+.home-section .home-text p{
+
+    font-size: 1rem;
+    margin: 10px 0;
+
+
+}
+.home-section .home-text a{
+    display: inline-block;
+    padding: 10px 40px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border-radius: 0.3rem;
+    color: var(--text-color);
+    border: 2px solid var(--text-color);
+}
+
+.home-section .home-text a:hover{
+    background: var(--bg-color);
+}
+
+/* -----------------------------------------about-------------------------------------------------- */
+
+.about{
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(17rem,auto));
+    align-items: center;
+    gap: 1.5rem;
+}
+
+
+
+.about .about-text h2{
+    font-size: 1.5rem;
+    text-transform: uppercase;
+
+}
+
+.about .about-text p{
+
+    font-size: 0.839rem;
+    margin: 0.5rem 0 1.4rem;
+    
+
+}
+.about .about-text a{
+    display: inline-block;
+    padding: 10px 40px ;
+    border: 2px solid var(--text-color);
+    border-radius: 0.3rem;
+    color: var(--text-color);
+}
+
+.about .about-img img{
+    border-radius: 10% ;
+    opacity: 0.9;
+}
+
+
+
+/* ---------------------------------------------------product------------------------------------------------------ */
+
+
+.product-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit , minmax(320px, auto));
+    gap: 1.5rem;
+
+
+}
+.heading{
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 40px;
+   
+    
+}
+
+.heading h2{
+    font-size: 2rem;
+    font-weight: 700;
+
+}
+
+.product-container .box {
+    box-shadow: var(--box-shadow);
+    border-radius: 0.3rem;
+    padding: 10px;
+}
+
+.product-container .box img{
+    width: 100%;
+    height: 250px;
+    background: #f1f1f1;
+    padding: 10px;
+    object-fit: contain;
+    object-position: center;
+}
+
+.product-container .box .price{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.product-container .box .price span{
+    padding: 5px;
+    background: var(--main-color);
+    border-radius: 0.3rem;
+}
+.product-container .box .price a{
+    color: var(--text-color);
+    text-transform: uppercase;
+    border:  2px solid var(--text-color);
+    border-radius: 0.3rem;
+    padding: 5px 20px;
+}
+
+/* ------------------------------------------------------------customers-------------------------------------------- */
+
+.customer-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit , minmax(280px, auto));
+    text-align: center;
+    gap: 1.5rem;
+
+}
+.customer-container .box{
+    padding: 20px 10px;
+    box-shadow: var(--box-shadow);
+    border-radius: 0.3rem;
+}
+.customer-container .box .stars i{
+    color: var(--main-color);
+}
+
+.customer-container .box img{
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+}
+
+.customer-container .box p{
+    padding: 10px 0;
+}
+
+/* ------------------------------------------------------footer---------------------------------------------------- */
+
+.footer{
+    display: grid;
+    grid-template-columns: repeat(auto-fit , minmax(280px, auto));
+    gap: 1.5rem;
+    
+}
+
+.footer  .social-icon{
+    font-size: 1.8rem;
+}
+
+.footer  .social-icon{
+    margin: 10px 0;
+}
+.footer  .social-icon a{
+
+    border-radius: 0.5rem;
+    padding: 5px 10px;
+    background: var(--text-color);
+    color: var(--bg-color);
+
+}
+.footer  .social-icon a:hover{
+    background: crimson;
+}
+.footer .Main-links a{
+ 
+    color: var(--text-color);
+    line-height: 1.8rem;
+
+}
+
+
+
+.contact span{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    line-height: 2rem;
+}
+
+.copyright{
+    text-align: center;
+    padding: 20px 0;
+    background: #edeae3 ;
+}
+
+
+/* --------------------------------------------------------screen sizes-------------------------------------- */
+
+
+@media only screen and (max-width:1089px){
+
+    header{
+        padding: 18px 60px;
+    }
+    section{
+        padding: 60px 60px;
+    }
+    .home-section .home-text h2 {
+        font-size: 3.5rem;
+    }
+}
+
+@media only screen and (max-width:989px){
+
+    header{
+        padding: 18px 4%;
+    }
+    section{
+        padding: 60px 4%;
+    }
+
+    .home-section .home-text h2 {
+        font-size: 3.2rem;
+    }
+}
+@media only screen and (max-width:768px) {
+    header .navbar{
+        position: absolute;
+        top: -578px;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 250px;
+        background: var(--bg-color);
+        box-shadow: var(--box-shadow);
+
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        transition: 0.3s linear;
+    }
+    .navbar.active{
+        top: 90%;
+    }
+    header .navbar a{
+        margin-top: 10px;
+        color: var(--text-color);
+    }
+    #menu-icon{
+        display: initial;
+        transition: 0.3s linear;
+    }
+    header{
+        padding: 16px 4%;
+    }
+    .home-section .home-text h2 {
+        font-size: 2.2rem;
+        line-height: 3.2rem;
+    }
+    .home-section .home-text a {
+        padding: 9px 30px;
+    }
+    .about .about-text a {
+        padding: 9px 30px;
+    }
+}
+@media only screen and (max-width: 591px) {
+   .home-text{
+        margin-top: 20px;
+    }
+    .about .about-img{
+        order: 2;
+    }
+    .home-section .home-text h2 {
+        font-size: 2rem;
+        line-height: 2.8rem;
+    }
+    .home-section .home-text p{
+        font-size: 1rem;
+    }
+}
+@media only screen and (max-width: 380px){
+    .home-section .home-text h2 {
+        font-size: 1.8rem;
+        line-height: 2rem;
+    }
+    .home-section .home-text p{
+        font-size: 16px;
+    }
+    .home-section .home-text a {
+        padding: 8px 25px;
+    }
+    header .logo {
+        font-size: 1.8rem;
+    }
+    .about .about-text a {
+        padding:  8px 25px;
+    }
+    .product-container .box img {
+        width: 100%;
+        height: 200px;
+        background: #f1f1f1;
+        padding: 10px;
+        object-fit: contain;
+        object-position: center;
+    }
+    .product-container .box .price a {
+        padding: 5px 15px;
+    }
+    .product .box h2{
+        font-size: 1.2rem;
+    }
+    .footer{
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+    .footer .social-icon a {
+        padding: 1px 5px;
+    }
+    .contact span {
+        display: flex;
+        flex-direction: column;
+    }
+    .search-box input::placeholder {
+        font-size: 0.938rem;
+    }
+}
